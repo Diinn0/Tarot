@@ -1,13 +1,19 @@
 package fr.mael.tarot.card;
 
+import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.font.FontRenderContext;
+import java.awt.image.BufferedImage;
+
+import fr.mael.tarot.utils.Utils;
 
 public class Card {
 
 	private int id;
 	private String name;
 	private String lore;
-	private Image image;
+	private BufferedImage image;
 	
 	public Card(int id, String name) {
 		this.id = id;
@@ -31,12 +37,12 @@ public class Card {
 		return this;
 	}
 	
-	public Card setImage(Image image) {
+	public Card setImage(BufferedImage image) {
 		this.image = image;
 		return this;
 	}
 	
-	public Image getImage() {
+	public BufferedImage getImage() {
 		return this.image;
 	}
 	
