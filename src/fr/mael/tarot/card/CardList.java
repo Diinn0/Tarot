@@ -6,9 +6,10 @@ import java.util.List;
 public class CardList {
 
 	private List<Card> cards = new ArrayList<Card>();
+	private String name;
 	
-	public CardList() {
-		
+	public CardList(String name) {
+		this.name = name;
 	}
 	
 	public List<Card> getCards() {
@@ -34,25 +35,34 @@ public class CardList {
 		return this.cards.contains(card);
 	}
 	
-	public Card searchCard(String search) {
-		try {
-			int id = Integer.parseInt(search);
-			
-			for (Card card : this.cards) {
-				if (card.getId() == id) {
-					return card;
+	public List<Card> getCardsBySearch(String search) {		
+		if (!search.isEmpty()) {
+			List<Card> cards = new ArrayList<Card>();
+
+			try {
+				int id = Integer.parseInt(search);
+				
+				for (Card card : this.cards) {
+					if (card.getId() == id) {
+						 cards.add(card);
+					}
 				}
-			}
-			
-		} catch (NumberFormatException e) {
-			
-			for (Card card : this.cards) {
-				if (card.getName().contains(search)) {
-					return card;
+				
+				return cards;
+				
+			} catch (NumberFormatException e) {
+				
+				for (Card card : this.cards) {
+					if (card.getName().toLowerCase().contains((search.toLowerCase()))) {
+						cards.add(card);
+					}
 				}
+				
+				return cards;
 			}
 		}
-		return null;
+		
+		return this.cards;
 	}
 	
 }
