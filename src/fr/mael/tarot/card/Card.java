@@ -46,4 +46,13 @@ public class Card {
 		return this.image;
 	}
 	
+	public void draw(Graphics g, int x, int y, int width, int height) {
+		g.setColor(Color.black);
+		g.drawRect(x, y, width, height);
+		g.drawImage(this.image, x, y, width, height - 20, null);
+		String title = Utils.integerToRoman(this.id) + " - " + this.name;
+		int titleWidth = g.getFontMetrics().stringWidth(title);
+		g.drawString(title, x + (width - titleWidth) / 2, y + height - 5);
+	}
+	
 }
