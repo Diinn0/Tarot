@@ -4,6 +4,11 @@ import java.io.File;
 import javax.swing.*;
 import javax.swing.filechooser.*;
  
+/**
+ * Filter for images
+ * @author Mael
+ *
+ */
 public class ImageFilter extends FileFilter {
  
     public boolean accept(File f) {

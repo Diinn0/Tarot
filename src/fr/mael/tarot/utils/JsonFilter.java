@@ -4,6 +4,11 @@ import java.io.File;
 import javax.swing.*;
 import javax.swing.filechooser.*;
  
+/**
+ * Filter for Json files
+ * @author Mael
+ *
+ */
 public class JsonFilter extends FileFilter {
  
     public boolean accept(File f) {

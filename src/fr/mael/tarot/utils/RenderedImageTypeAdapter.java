@@ -12,6 +12,10 @@ import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
+/**
+ * This class give informations to Gson to serialize and deserialize BufferedImage
+ *
+ */
 public class RenderedImageTypeAdapter extends TypeAdapter<BufferedImage> {
 
 	private static final TypeAdapter<BufferedImage> renderedImageTypeAdapter = new RenderedImageTypeAdapter()

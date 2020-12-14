@@ -8,6 +8,11 @@ import java.awt.image.BufferedImage;
 
 import fr.mael.tarot.utils.Utils;
 
+/**
+ * This class represent a Card
+ * @author Mael
+ *
+ */
 public class Card {
 
 	private int id;
@@ -46,6 +51,14 @@ public class Card {
 		return this.image;
 	}
 	
+	/**
+	 * This method draw Card in JPanel using Graphics
+	 * @param g 
+	 * @param x
+	 * @param y
+	 * @param width
+	 * @param height
+	 */
 	public void draw(Graphics g, int x, int y, int width, int height) {
 		g.setColor(Color.black);
 		g.drawRect(x, y, width, height);

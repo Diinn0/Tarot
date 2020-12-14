@@ -3,6 +3,11 @@ package fr.mael.tarot.card;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class represent a Deck of cards
+ * @author Mael
+ *
+ */
 public class CardList {
 
 	private List<Card> cards = new ArrayList<Card>();
@@ -35,6 +40,11 @@ public class CardList {
 		return this.cards.contains(card);
 	}
 	
+	/**
+	 * This method is used to draw Card 
+	 * @param search
+	 * @return
+	 */
 	public List<Card> getCardsBySearch(String search) {		
 		if (!search.isEmpty()) {
 			List<Card> cards = new ArrayList<Card>();
