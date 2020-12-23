@@ -16,12 +16,12 @@ import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 
 import fr.mael.tarot.card.CardList;
-import fr.mael.tarot.utils.RenderedImageTypeAdapter;
+import fr.mael.tarot.utils.BufferedImageTypeAdapter;
 
 public class SaveProcess {
 
 	private GsonBuilder builder = new GsonBuilder();
-	private Gson gson = builder.registerTypeHierarchyAdapter(BufferedImage.class, RenderedImageTypeAdapter.getRenderedImageTypeAdapter()).setPrettyPrinting().create();
+	private Gson gson = builder.registerTypeHierarchyAdapter(BufferedImage.class, BufferedImageTypeAdapter.getBufferedImageTypeAdapter()).setPrettyPrinting().create();
 	private File file;
 	
 	public SaveProcess(File file) {
